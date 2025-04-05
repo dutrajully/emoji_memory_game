@@ -67,3 +67,16 @@ function checkWin() {
     }
 }
 
+// Function to reset the game
+function resetGame() {
+    // Clear the matchedCards and flippedCards arrays
+    matchedCards = [];
+    flippedCards = [];
+
+    // Recreate the deck and re-render the board
+    createDeck();
+    renderBoard();
+
+    // Hide the restart button again
+    document.getElementById('restart-btn').style.display = "none";
+}

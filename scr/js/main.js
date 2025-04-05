@@ -14,11 +14,15 @@ document.getElementById('game-board').addEventListener('click', function (e) {
 
 // Event listener for restart button
 document.getElementById('restart-btn').addEventListener('click', () => {
-  // Clear message and hide restart button
+  // Clear the message and hide the restart button
   document.getElementById('message').textContent = "";
   document.getElementById('restart-btn').style.display = "none";
   
+  // Reset the flipped and matched cards arrays to restart the game
+  flippedCards = [];
+  matchedCards = [];
+
   // Reinitialize the game
-  createDeck();       // Shuffle and reset the deck
-  renderBoard();      // Re-render the board with new cards
+  createDeck();        // Shuffle and reset the deck
+  renderBoard();       // Re-render the board with new cards
 });
